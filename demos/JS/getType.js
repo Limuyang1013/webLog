@@ -18,3 +18,6 @@ getType([1, 2, 3, 4]);
 getType({
     1: 'hello'
 });
+
+console.log(123..toString());
+console.log((123).toString());
