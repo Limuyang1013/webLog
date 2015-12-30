@@ -25,3 +25,5 @@ var d = new Date(1111111);
 
 console.log(d.toLocaleString());
 console.log(d.toUTCString());
+
+// console.log(new Date(now));
