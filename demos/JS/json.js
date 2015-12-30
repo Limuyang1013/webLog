@@ -30,4 +30,24 @@ function fn(key, value) {
 }
 
 var log = JSON.stringify(xiaoming, fn, '  ');
-console.log(log);
+// console.log(log);
+
+var person = {
+    name: 'xiaoMing',
+    age: '20',
+    job: 'STUdent',
+    toJSON: function() {
+        return {
+            'Name': this.name.toUpperCase(),
+            'Job': this.job.toLowerCase()
+        }
+    }
+}
+
+var str = JSON.stringify(person);
+
+console.log(str);
+
+var obj = JSON.parse(str);
+
+console.log(obj);
