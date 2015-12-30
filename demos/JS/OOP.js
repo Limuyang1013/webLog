@@ -1,9 +1,9 @@
 // ---------- obj ----------
-var Student = {
-    school: 'JLD',
-    cls: '2',
-    grade: '3'
-};
+// var Student = {
+//     school: 'JLD',
+//     cls: '2',
+//     grade: '3'
+// };
 
 // var xiaoming = {
 //     age: '20',
@@ -14,30 +14,30 @@ var Student = {
 
 // console.log(xiaoming.school);
 
-function createStu(name) {
-    var s = Object.create(Student);
+// function createStu(name) {
+//     var s = Object.create(Student);
 
-    s.name = name;
+//     s.name = name;
 
-    return s;
-}
+//     return s;
+// }
 
-var xiaoming = createStu('XIAOMING');
+// var xiaoming = createStu('XIAOMING');
 
 // console.log(xiaoming.cls);
 
 // ---------- fn ----------
-var Stu = function(name) {
-    this.name = name;
-    this.sayHi = function() {
-        return 'Hello, ' + this.name + '!';
-        // 传入 name 并使用 name 提示 undefined
-        // 直接使用 name，会产生闭包
-        // 所以应该使用 this.name
-    }
-}
+// var Stu = function(name) {
+//     this.name = name;
+//     this.sayHi = function() {
+//         return 'Hello, ' + this.name + '!';
+//         // 传入 name 并使用 name 提示 undefined
+//         // 直接使用 name，会产生闭包
+//         // 所以应该使用 this.name
+//     }
+// }
 
-var xm = new Stu('XIAOMING');
+// var xm = new Stu('XIAOMING');
 
 // console.log(xm.sayHi());
 // console.log(xm);
