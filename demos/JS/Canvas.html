@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Demo</title>
+    <style>
+    body {
+        background: #999;
+    }
+    </style>
+</head>
+<body>
+    <canvas id="wrap" width="400" height="300"></canvas>
+    <script>
+    var el = document.getElementById('wrap'),
+        cvs = el.getContext('2d');
+
+    cvs.clearRect(0, 0, 400, 300);
+    cvs.fillStyle = '#fff';
+    cvs.fillRect(40, 40, 100, 100);
+    </script>
+</body>
+</html>
