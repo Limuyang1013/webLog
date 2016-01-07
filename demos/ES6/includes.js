@@ -6,7 +6,7 @@
 // console.log(r2); // false
 
 var arr = [1, 2, 3, undefined, NaN];
-arr.__proto__.sayHi = 'Hello';
+Array.prototype.sayHi = 'Hello';
 
 // console.log(arr.indexOf(2) !== -1); // true
 // console.log(arr.indexOf(undefined) !== -1); // true
