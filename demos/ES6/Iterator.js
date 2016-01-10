@@ -6,8 +6,13 @@
 // console.log(getNext.next()); // { value: 3, done: false }
 // console.log(getNext.next()); // { value: undefined, done: true }
 
-let arr = [1, 2, 3];
+let arr = [1, 2, 3],
+    iter = arr[Symbol.iterator]();
 
 for (let i of arr) {
+    console.log(i);
+};
+
+for (let i of iter) {
     console.log(i);
 };
