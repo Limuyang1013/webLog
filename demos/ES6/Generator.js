@@ -9,12 +9,22 @@
 // console.log(iter.next(10)); // { value: 2, done: false }
 // console.log(iter.next()); // { value: 3, done: true }
 
+// function* gen(x) {
+//     yield x + 1;
+//     yield x + 2;
+//     return x + 3;
+// };
+
+// for (let i of gen(0)) {
+//     console.log(i);
+// }; // 1 2
+
 function* gen(x) {
-    yield x + 1;
-    yield x + 2;
-    return x + 3;
+    let y = yield x + 1;
+    return y + 1;
 };
 
-for (let i of gen(0)) {
-    console.log(i);
-}; // 1 2
+let iter = gen(0);
+
+console.log(iter.next()); // { value: 1, done: false }
+console.log(iter.next(10)); // { value: 11, done: true }
