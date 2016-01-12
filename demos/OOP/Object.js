@@ -91,8 +91,8 @@
 
 var obj = {};
 
-Object.defineProperty(obj,'name',{
+Object.defineProperty(obj, 'name', {
     set: function() {},
     get: function() {},
-    writable: true
+    writable: undefined
 }); // TypeError: Invalid property.  A property cannot both have accessors and be writable or have a value, #<Object>
