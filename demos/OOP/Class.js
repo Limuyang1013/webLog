@@ -7,10 +7,6 @@ class Person {
     sayHi() {
         console.log('Hello, ' + this.name + '!');
     };
-
-    get str() {
-        return 'String';
-    };
 };
 
 class Student extends Person {
@@ -37,4 +33,11 @@ banri.showAge(); // Always 18
 console.log(banri instanceof Person); // true
 console.log(banri instanceof Student); // true
 
-console.log(banri.str)
+console.log(banri.sayHi === Person.prototype.sayHi); // true
+
+
+console.log(banri.str);
+
+
+console.log('123'.__proto__ === String.prototype)
+console.log(String.prototype.__proto__ === Object.prototype)
