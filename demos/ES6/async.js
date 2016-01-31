@@ -13,8 +13,11 @@ let readFile = function(fileName) {
 };
 
 let asyncRF = async function() {
-    let a1 = await readFile('.babelrc'),
-        a2 = await readFile('.gitignore');
+    // 注释中的写法存在依赖关系，a2 会在 a1 完成后才触发
+    // let a1 = await readFile('.babelrc'),
+    //     a2 = await readFile('.gitignore');
+
+    let [a1, a2] = await Promise.all([readFile('.babelrc'), readFile('.gitignore')]);
 
     console.log(a1.toString());
     console.log(a2.toString());
