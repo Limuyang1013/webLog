@@ -19,9 +19,9 @@
     }
 
     // 不支持 AMD 模块时才会执行以下代码
-    // 由于 factory(global) 没有传入 noGlobal，所以值是 undefined
+    // 由于 factory(global) 没有传入 noGlobal，所以 !noGlobal 为 true
     // 不支持 CommonJS，也不支持 AMD，则将 jQuery 暴露为全局变量
-    if (typeof noGlobal === "undefined") {
+    if (!noGlobal) {
         window.jQuery = window.$ = jQuery;
     }
 
