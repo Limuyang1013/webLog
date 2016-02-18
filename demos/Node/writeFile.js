@@ -1,5 +1,5 @@
 const fs = require('fs');
-const args = process.argv;
+const argv = process.argv;
 
 function copy(src, dist) {
     fs.readFile(src, 'utf8', (err, data) => {
@@ -13,4 +13,4 @@ function copy(src, dist) {
     });
 };
 
-copy(args[2], args[3]);
+copy(argv[2], argv[3]);
