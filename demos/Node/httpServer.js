@@ -1,11 +1,24 @@
 const http = require('http');
+const argv = process.argv;
 
-http.createServer((req, res) => {
-    res.writeHeader(200, {
+// const server = http.createServer((req, res) => {
+//     res.writeHead(200, {
+//         'Content-Type': 'text/html'
+//     });
+//     res.write('<h1>Hello Node.js!</h1>');
+//     res.end('Done.')
+// });
+
+const server = new http.Server();
+
+server.on('request', (req, res) => {
+    res.writeHead(200, {
         'Content-Type': 'text/html'
     });
     res.write('<h1>Hello Node.js!</h1>');
     res.end('Done.')
-}).listen(1024);
+});
 
-console.log('HTTP server is listening: 1024');
+server.listen(argv[2]);
+
+console.log(`HTTP server is listening: ${argv[2]}`);
